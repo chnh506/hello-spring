@@ -9,7 +9,6 @@ import org.springframework.stereotype.Service;
 import java.util.List;
 import java.util.Optional;
 
-@Service
 public class MemberService {
 
     // final 키워드는 무슨의미지 ..?
@@ -18,7 +17,6 @@ public class MemberService {
     // MemberService 입장에서..
     // -> memoryMemberRepository를 내가 직접 new하지 않고 외부에서 넣어 준다.
     // -> 우리는 이런 걸 '의존성 주입(Dependency Injection)'이라 한다.
-    @Autowired
     public MemberService(MemberRepository memberRepository) {
         this.memberRepository = memberRepository;
     }
